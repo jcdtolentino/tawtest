@@ -47,108 +47,128 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/layout_follower"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_pic"
-        app:layout_constraintVertical_bias="0.134"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/followers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="followers: " />
-
-        <TextView
-            android:id="@+id/following"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="following: " />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_cadview_background"
-        android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_follower"
-        app:layout_constraintVertical_bias="0.133"
-        tools:layout_editor_absoluteX="8dp">
-
-        <TextView
-            android:id="@+id/tvname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="name: " />
-
-        <TextView
-            android:id="@+id/tvcompany"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="company: " />
-
-        <TextView
-            android:id="@+id/tvblog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="blog: " />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layouts_notes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/saveButton"
-        app:layout_constraintTop_toBottomOf="@+id/layout_info"
-        app:layout_constraintVertical_bias="0.267"
-        tools:layout_editor_absoluteX="8dp">
-
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:text="Notes:" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/et_notes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_cadview_background"
-            android:hint="Insert notes (Optional) "
-            android:padding="4dp" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_follower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_pic"
+                app:layout_constraintVertical_bias="0.134"
+                tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/ic_cadview_background"
-        android:backgroundTint="@android:color/transparent"
-        android:text="Save"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="followers: " />
+
+                <TextView
+                    android:id="@+id/following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="following: " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_cadview_background"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_follower"
+                app:layout_constraintVertical_bias="0.133"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:id="@+id/tvname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="name: " />
+
+                <TextView
+                    android:id="@+id/tvcompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="company: " />
+
+                <TextView
+                    android:id="@+id/tvblog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="blog: " />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layouts_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                app:layout_constraintTop_toBottomOf="@+id/layout_info"
+                app:layout_constraintVertical_bias="0.267"
+                tools:layout_editor_absoluteX="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Notes:" />
+
+                <EditText
+                    android:id="@+id/et_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_cadview_background"
+                    android:hint="Insert notes (Optional) "
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="36dp"
+                android:background="@drawable/ic_cadview_background"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Save"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
 
 
     <ProgressBar
